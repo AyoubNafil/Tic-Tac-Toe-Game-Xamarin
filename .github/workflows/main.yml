@@ -32,6 +32,9 @@ jobs:
       
     - name: Android
       run: |
-        cd Tic\ Tac\ Toe/Tic_Tac_Toe.Android
+        cd Tic\ Tac\ Toe/Tic_Tac_Toe
+        nuget restore
+        cd..
+        cd Tic_Tac_Toe.Android
         msbuild Tic_Tac_Toe.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
  
